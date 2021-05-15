@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+@mixin mygrid {
+    grid-template-columns: repeat(auto-fit, minmax(5em, auto));
+    grid-auto-rows: minmax(auto, 10em);
+    gap: 1em;
+}
+
+.wrapper {
+    position: relative;
+    font-family: 'Quicksand', sans-serif;
+    background: #eee;
+    display: grid;
+    @include mygrid;
+    margin: 0 auto;
+    padding: 1em;
+
+    .block {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 1px 2px black;
+        border: 10px solid white;
+
+        h1 {
+            position: relative;
+            z-index: 1;
+            font-weight: 999;
+            background-color: white;
+            padding: .5em;
+            color: black;
+            text-shadow: 0 1px 3px black;
+            mix-blend-mode: screen;
+
+            &::after {
+                content: '';
+                display: block;
+                border-bottom: 1px solid #222;
+            }
+        }
+
+        &::after {
+            content: '';
+            pointer-events: none;
+            display: block;
+            background-color: black;
+            opacity: 0;
+            transition: opacity .5s ease;
+        }
+
+        &:hover::after {
+            opacity: .5;
+            cursor: pointer;
+        }
+    }
+
+    .one {
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+
+    .three {
+        grid-column: 3 / 4;
+    }
+
+    .grid {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        display: none;
+        grid-template-columns: repeat(3, 1fr);
+        background: none;
+        padding: 0;
+
+        p {
+            margin: 0;
+            border: 1px solid white;
+            background: black;
+            opacity: .2;
+        }
+    }
+
+    .blur {
+        background-position: center;
+        background-size: cover;
+        filter: blur(2px);
+    }
+
+    .block::after, .blur {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .wrapper {
+        display: block;
+
+        .block {
+            margin-bottom: 1em;
+
+            &:last-child {
+                margin: 0;
+            }
+        }
+    }
+
+}
+
+body {
+    text-align: center;
+
+    input:checked ~ .wrapper .grid {
+        display: grid;
+    }
+}

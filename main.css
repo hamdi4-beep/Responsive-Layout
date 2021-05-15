@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+.wrapper {
+  position: relative;
+  font-family: 'Quicksand', sans-serif;
+  background: #eee;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(5em, auto))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(5em, auto));
+  grid-auto-rows: minmax(auto, 10em);
+  gap: 1em;
+  margin: 0 auto;
+  padding: 1em;
+}
+
+.wrapper .block {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 0 1px 2px black;
+          box-shadow: 0 1px 2px black;
+  border: 10px solid white;
+}
+
+.wrapper .block h1 {
+  position: relative;
+  z-index: 1;
+  font-weight: 999;
+  background-color: white;
+  padding: .5em;
+  color: black;
+  text-shadow: 0 1px 3px black;
+  mix-blend-mode: screen;
+}
+
+.wrapper .block h1::after {
+  content: '';
+  display: block;
+  border-bottom: 1px solid #222;
+}
+
+.wrapper .block::after {
+  content: '';
+  pointer-events: none;
+  display: block;
+  background-color: black;
+  opacity: 0;
+  -webkit-transition: opacity .5s ease;
+  transition: opacity .5s ease;
+}
+
+.wrapper .block:hover::after {
+  opacity: .5;
+  cursor: pointer;
+}
+
+.wrapper .one {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.wrapper .three {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3 / 4;
+}
+
+.wrapper .grid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  display: none;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  background: none;
+  padding: 0;
+}
+
+.wrapper .grid p {
+  margin: 0;
+  border: 1px solid white;
+  background: black;
+  opacity: .2;
+}
+
+.wrapper .blur {
+  background-position: center;
+  background-size: cover;
+  -webkit-filter: blur(2px);
+          filter: blur(2px);
+}
+
+.wrapper .block::after, .wrapper .blur {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (max-width: 600px) {
+  .wrapper {
+    display: block;
+  }
+  .wrapper .block {
+    margin-bottom: 1em;
+  }
+  .wrapper .block:last-child {
+    margin: 0;
+  }
+}
+
+body {
+  text-align: center;
+}
+
+body input:checked ~ .wrapper .grid {
+  display: -ms-grid;
+  display: grid;
+}
+/*# sourceMappingURL=main.css.map */
