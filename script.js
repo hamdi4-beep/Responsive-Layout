@@ -7,6 +7,8 @@ const imgs = [
 ]
 let x = 0
 
+// Loop through the imgs array and create a div with blurred effect
+
 for (const img of imgs) {
     const div = document.createElement('div')
     div.classList.add('blur')
@@ -16,10 +18,12 @@ for (const img of imgs) {
 
 wrapper.addEventListener('click', e => {
     if (e.target.classList[0] == 'block') {
-        const target = e.target
-        display(target)
+        const block = e.target
+        display(block)
     }
 })
+
+// Hide all blocks except the one that triggered the click event
 
 function display(elem) {
     blocks.forEach(block => {
