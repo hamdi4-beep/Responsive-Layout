@@ -6,9 +6,17 @@
     gap: 1em;
 }
 
+body {
+    font-family: 'Quicksand', sans-serif;
+    text-align: center;
+
+    input:checked ~ .wrapper .grid {
+        display: grid;
+    }
+}
+
 .wrapper {
     position: relative;
-    font-family: 'Quicksand', sans-serif;
     background: #eee;
     display: grid;
     @include mygrid;
@@ -21,7 +29,7 @@
         justify-content: center;
         align-items: center;
         box-shadow: 0 1px 2px black;
-        border: 10px solid white;
+        border: 10px solid transparent;
 
         h1 {
             position: relative;
@@ -32,6 +40,7 @@
             color: black;
             text-shadow: 0 1px 3px black;
             mix-blend-mode: screen;
+            outline: none;
 
             &::after {
                 content: '';
@@ -101,9 +110,11 @@
 
     .wrapper {
         display: block;
+        padding: .5em;
 
         .block {
-            margin-bottom: 1em;
+            margin-bottom: .5em;
+            padding: .5em;
 
             &:last-child {
                 margin: 0;
@@ -111,12 +122,8 @@
         }
     }
 
-}
-
-body {
-    text-align: center;
-
-    input:checked ~ .wrapper .grid {
-        display: grid;
+    h1 {
+        font-size: 1em;
     }
+
 }

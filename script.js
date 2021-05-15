@@ -17,8 +17,8 @@ for (const img of imgs) {
 }
 
 wrapper.addEventListener('click', e => {
-    if (e.target.classList[0] == 'block') {
-        const block = e.target
+    if (e.target.classList[0] == 'blur') {
+        const block = e.target.parentNode // grab the block element that triggered the event
         display(block)
     }
 })
