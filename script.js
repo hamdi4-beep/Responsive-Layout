@@ -4,7 +4,7 @@ const label = document.querySelector('label')
 
 update()
 
-range.addEventListener('change', e => {
+range.addEventListener('input', e => {
     const elem = e.target
     const value = elem.value
     update()
