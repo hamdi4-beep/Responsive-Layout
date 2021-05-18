@@ -1,36 +1,16 @@
-const blocks = document.querySelectorAll('.block')
-const wrapper = blocks[0].parentElement
-const imgs = [
-    'https://images2.alphacoders.com/987/987245.png',
-    'https://cdn.awwni.me/179n9.png',
-    'https://pbs.twimg.com/media/DkaJlCeU0AA2Wry.jpg'
-]
-let x = 0
+const range = document.querySelector('#range')
+const img = document.querySelector('img')
+const label = document.querySelector('label')
 
-// Loop through the imgs array and create a div with blurred effect
+update()
 
-for (const img of imgs) {
-    const div = document.createElement('div')
-    div.classList.add('blur')
-    div.style.backgroundImage = `url(${img})`
-    blocks[x++].append(div)
-}
-
-wrapper.addEventListener('click', e => {
-    if (e.target.classList[0] == 'blur') {
-        const block = e.target.parentNode // grab the block element that triggered the event
-        display(block)
-    }
+range.addEventListener('change', e => {
+    const elem = e.target
+    const value = elem.value
+    update()
 })
 
-// Hide all blocks except the one that triggered the click event
-
-function display(elem) {
-    blocks.forEach(block => {
-        if (block == elem) {
-            elem.style.display = 'flex'
-        } else {
-            block.style.display = 'none'
-        }
-    })
+function update() {
+    img.style.opacity = range.value / 100
+    label.textContent = `${range.value}%`
 }
