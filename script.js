@@ -2,15 +2,12 @@ const range = document.querySelector('#range')
 const img = document.querySelector('img')
 const label = document.querySelector('label')
 
-update()
+update(range)
 
 range.addEventListener('input', e => {
-    const elem = e.target
-    const value = elem.value
-    update()
+    update(e.target)
 })
 
-function update() {
-    img.style.opacity = range.value / 100
-    label.textContent = `${range.value}%`
+function update(elem) {
+    img.style.opacity = (label.textContent = `${elem.value}%`).replace(/%/, '') / 100
 }
