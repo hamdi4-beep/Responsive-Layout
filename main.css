@@ -1,5 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 body {
+  font-family: 'Quicksand', sans-serif;
+  background-color: #9b51e0;
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+}
+
+body .container {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -9,26 +29,41 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 0;
-  min-height: 100vh;
+  color: white;
 }
 
-body .wrapper {
-  font-family: 'Quicksand', sans-serif;
-  font-size: 2em;
-  display: -ms-grid;
-  display: grid;
-  justify-items: center;
+body .container .spinner {
+  position: absolute;
+  z-index: -1;
+  background-color: none;
+  width: 10em;
+  height: 10em;
+  border: 1px solid white;
+  border-left-color: #0f4053;
+  border-radius: 50%;
+  -webkit-animation: spin 1s ease infinite;
+          animation: spin 1s ease infinite;
 }
 
-body .wrapper img {
-  -webkit-transition: all .5s ease;
-  transition: all .5s ease;
-  width: 30vh;
-  height: 60vh;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
 /*# sourceMappingURL=main.css.map */

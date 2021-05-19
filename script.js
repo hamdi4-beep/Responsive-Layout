@@ -1,13 +1,12 @@
-const range = document.querySelector('#range')
-const img = document.querySelector('img')
-const label = document.querySelector('label')
+const list = document.querySelectorAll('li:not(li:first-child)')
+const ul = list[0].parentElement
 
-update(range)
-
-range.addEventListener('input', e => {
-    update(e.target)
+ul.addEventListener('click', e => {
+    list.forEach(li => {
+        if (li.style.display != 'block') {
+            li.style.display = 'block'
+        } else {
+            li.style.display = 'none'
+        }
+    })
 })
-
-function update(elem) {
-    img.style.opacity = (label.textContent = `${elem.value}%`).replace(/%/, '') / 100
-}
