@@ -1,44 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
     font-family: 'Quicksand', sans-serif;
-    background-color: rgba($color: #9B51E0, $alpha: 1.0);
     display: grid;
     justify-items: center;
     align-items: center;
+    margin: 0;
     min-height: 100vh;
 
-    .container {
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: white;
-
-        .spinner {
-            position: absolute;
-            z-index: -1;
-            background-color: none;
-            width: 10em;
-            height: 10em;
-            border: 1px solid white;
-            border-left-color: rgba($color: #0f4053, $alpha: 1.0);
-            border-radius: 50%;
-            animation: spin 1s ease infinite;
-        }
+    h1 {
+        font-size: 3em;
+        text-shadow: 0 0 2px black;
+        text-align: center;
     }
-}
 
-@keyframes spin {
-    from {
-        transform: rotate(0deg);
-    } to {
-        transform: rotate(360deg);
+    .fade-effect {
+        opacity: 0;
+        transition: all .5s ease;
     }
 }

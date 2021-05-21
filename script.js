@@ -1,12 +1,17 @@
-const list = document.querySelectorAll('li:not(li:first-child)')
-const ul = list[0].parentElement
+const header = document.querySelector('h1')
+const str = header.textContent
+let char = 0
+header.textContent = ''
 
-ul.addEventListener('click', e => {
-    list.forEach(li => {
-        if (li.style.display != 'block') {
-            li.style.display = 'block'
-        } else {
-            li.style.display = 'none'
-        }
-    })
-})
+for (let x=0; x<str.length; x++) header.innerHTML += `<span>${str[x]}</span>`
+
+const letters = document.querySelectorAll('span')
+
+const timer = setInterval(function() {
+    if (char < str.length) {
+        letters[char++].classList.add('fade-effect')
+    } else {
+        header.textContent = 'Thanks for watching!'
+        clearInterval(timer)
+    }
+}, 200)
