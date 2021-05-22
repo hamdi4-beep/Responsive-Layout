@@ -71,6 +71,13 @@ body {
                         cursor: pointer;
                     }
                 }
+
+                &::before, &::after {
+                    content: '';
+                    display: block;
+                    border: 1px solid black;
+                    width: 100%;
+                }
             }
         }
 

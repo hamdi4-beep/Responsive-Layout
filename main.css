@@ -98,6 +98,13 @@ body .wrapper .right .social-links .fab:hover {
   cursor: pointer;
 }
 
+body .wrapper .right .social-links::before, body .wrapper .right .social-links::after {
+  content: '';
+  display: block;
+  border: 1px solid black;
+  width: 100%;
+}
+
 body .wrapper .left, body .wrapper .right {
   min-height: 100vh;
 }
