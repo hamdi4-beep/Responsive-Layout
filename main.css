@@ -1,8 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 body {
   font-family: 'Quicksand';
   font-size: 18px;
-  margin: 0;
 }
 
 body .wrapper {
@@ -13,19 +19,6 @@ body .wrapper {
 }
 
 body .wrapper .left {
-  background: purple;
-  color: white;
-}
-
-body .wrapper .left span {
-  display: block;
-}
-
-body .wrapper .right {
-  background: #eee;
-}
-
-body .wrapper .left, body .wrapper .right {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -35,6 +28,73 @@ body .wrapper .left, body .wrapper .right {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background: purple;
+  color: white;
+}
+
+body .wrapper .left .avatar-wrapper {
+  width: 10em;
+  height: 10em;
+  border-radius: 50%;
+  border: 3px solid white;
+  margin: 0 auto .5em auto;
+  overflow: hidden;
+}
+
+body .wrapper .left .avatar-wrapper img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  width: 100%;
+  height: 100%;
+}
+
+body .wrapper .left span {
+  display: block;
+}
+
+body .wrapper .right {
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #eee;
+  color: black;
+}
+
+body .wrapper .right .social-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: .5em;
+  gap: 1em;
+}
+
+body .wrapper .right .social-links .fab {
+  -webkit-transition: -webkit-transform .5s ease;
+  transition: -webkit-transform .5s ease;
+  transition: transform .5s ease;
+  transition: transform .5s ease, -webkit-transform .5s ease;
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
+}
+
+body .wrapper .right .social-links .fab:hover {
+  -webkit-transform: scale(2, 2);
+          transform: scale(2, 2);
+  cursor: pointer;
+}
+
+body .wrapper .left, body .wrapper .right {
   min-height: 100vh;
 }
 

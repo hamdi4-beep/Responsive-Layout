@@ -1,18 +1,45 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Quicksand';
     font-size: 18px;
-    margin: 0;
-    // min-height: 100vh;
 
     .wrapper {
         display: grid;
         grid-template-columns: repeat(2, 50%);
 
         .left {
+            @include flex-center();
             background: purple;
             color: white;
+
+            .avatar-wrapper {
+                width: 10em;
+                height: 10em;
+                border-radius: 50%;
+                border: 3px solid white;
+                margin: 0 auto .5em auto;
+                overflow: hidden;
+
+                img {
+                    object-fit: cover;
+                    object-position: center;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
 
             span {
                 display: block;
@@ -20,13 +47,30 @@ body {
         }
 
         .right {
+            display: grid;
+            justify-items: center;
+            align-items: center;
             background: #eee;
+            color: black;
+
+            .social-links {
+                @include flex-center();
+                margin: .5em;
+                gap: 1em;
+
+                .fab {
+                    transition: transform .5s ease;
+                    transform: scale(1, 1);
+
+                    &:hover {
+                        transform: scale(2, 2);
+                        cursor: pointer;
+                    }
+                }
+            }
         }
 
         .left, .right {
-            display: flex;
-            justify-content: center;
-            align-items: center;
             min-height: 100vh;
 
             h1:first-letter {
