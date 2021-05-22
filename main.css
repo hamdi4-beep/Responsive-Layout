@@ -32,6 +32,10 @@ body .wrapper .left {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   background: url(https://www.desktopbackground.org/download/3840x2400/2012/01/31/336601_anime-landscape-sky-wallpapers-hd_4000x2500_h.png);
   background-size: cover;
   background-position: center;
@@ -67,7 +71,7 @@ body .wrapper .left .fade-in {
 }
 
 body .wrapper .left .scroll {
-  margin: 2em auto;
+  margin: auto auto 5em auto;
   text-align: center;
   display: none;
 }
@@ -83,13 +87,11 @@ body .wrapper .left .scroll::after {
 }
 
 body .wrapper .left .scroll a {
-  text-decoration: none;
+  text-decoration: underline;
   color: white;
 }
 
 body .wrapper .right {
-  background-size: cover;
-  background-position: center;
   display: -ms-grid;
   display: grid;
   justify-items: center;
@@ -144,7 +146,8 @@ body .wrapper .right .social-links .fa-youtube {
 }
 
 body .wrapper .right h1 {
-  text-shadow: 0px 1px 4px black;
+  text-shadow: 1px 0px 3px black;
+  color: #1F2833;
 }
 
 body .wrapper .left, body .wrapper .right {
@@ -159,6 +162,9 @@ body .wrapper .left h1:first-letter, body .wrapper .right h1:first-letter {
 @media only screen and (max-width: 768px) {
   body div.wrapper, body div.wrapper .left .scroll {
     display: block;
+  }
+  body div.wrapper .left .content {
+    margin-top: auto;
   }
 }
 /*# sourceMappingURL=main.css.map */

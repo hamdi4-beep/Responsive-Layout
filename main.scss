@@ -26,6 +26,7 @@ body {
 
         .left {
             @include flex-center();
+            flex-direction: column;
             background: url(https://www.desktopbackground.org/download/3840x2400/2012/01/31/336601_anime-landscape-sky-wallpapers-hd_4000x2500_h.png);
             background-size: cover;
             background-position: center;
@@ -57,7 +58,7 @@ body {
             }
 
             .scroll {
-                margin: 2em auto;
+                margin: auto auto 5em auto;
                 text-align: center;
                 display: none;
 
@@ -71,16 +72,13 @@ body {
                 }
 
                 a {
-                    text-decoration: none;
+                    text-decoration: underline;
                     color: white;
                 }
             }
         }
 
         .right {
-            // background-image: url(https://images.hdqwalls.com/download/anime-scenery-field-4k-9j-2048x2048.jpg);
-            background-size: cover;
-            background-position: center;
             display: grid;
             justify-items: center;
             align-items: center;
@@ -119,7 +117,8 @@ body {
 
             h1 {
                 text-shadow:
-                0px 1px 4px black;
+                1px 0px 3px black;
+                color: #1F2833;
             }
 
         }
@@ -139,6 +138,10 @@ body {
     
     body div.wrapper, body div.wrapper .left .scroll {
         display: block;
+    }
+
+    body div.wrapper .left .content {
+        margin-top: auto;
     }
 
 }

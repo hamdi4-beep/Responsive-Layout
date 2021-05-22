@@ -20,7 +20,7 @@ const timer = setInterval(
             clearInterval(timer)
         }
     }
-, 100)
+, 200)
 
 fetch('https://api.github.com/users/hamdi4-beep').then(res => {
     if (res.ok) {
