@@ -15,7 +15,7 @@ const spans = document.querySelectorAll('span')
 const timer = setInterval(
     () => {
         if (char < spans.length) {
-            spans[char++].classList.add('fade-in')
+            spans[char == 5 ? char += 1 : char++].classList.add('fade-in')
         } else {
             clearInterval(timer)
         }

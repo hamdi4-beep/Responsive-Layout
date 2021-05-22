@@ -65,6 +65,7 @@ body {
                 .fab {
                     transition: transform .5s ease;
                     transform: scale(1, 1);
+                    color: #2F80ED;
 
                     &:hover {
                         transform: scale(2, 2);

@@ -90,6 +90,7 @@ body .wrapper .right .social-links .fab {
   transition: transform .5s ease, -webkit-transform .5s ease;
   -webkit-transform: scale(1, 1);
           transform: scale(1, 1);
+  color: #2F80ED;
 }
 
 body .wrapper .right .social-links .fab:hover {
