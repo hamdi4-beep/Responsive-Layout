@@ -25,12 +25,13 @@ body {
         grid-template-columns: repeat(2, 50%);
 
         .left {
+            background: url(https://i.redd.it/z9cggpeubvt01.jpg);
+            background-position: center;
+            background-size: cover;
             @include flex-center();
             flex-direction: column;
-            background: url(https://www.desktopbackground.org/download/3840x2400/2012/01/31/336601_anime-landscape-sky-wallpapers-hd_4000x2500_h.png);
-            background-size: cover;
-            background-position: center;
             color: white;
+            box-shadow: 0 0 5px black inset;
 
             .avatar-wrapper {
                 width: 10em;
