@@ -1,25 +1,48 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
 body {
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'Quicksand';
+  margin: 0;
+}
+
+body .wrapper {
   display: -ms-grid;
   display: grid;
-  justify-items: center;
+  -ms-grid-columns: (50%)[2];
+      grid-template-columns: repeat(2, 50%);
+}
+
+body .wrapper .left {
+  background: purple;
+  color: white;
+}
+
+body .wrapper .left span {
+  display: block;
+}
+
+body .wrapper .right {
+  background: #eee;
+}
+
+body .wrapper .left, body .wrapper .right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 0;
   min-height: 100vh;
 }
 
-body h1 {
-  font-size: 3em;
-  text-shadow: 0 0 2px black;
-  text-align: center;
-}
-
-body .fade-effect {
-  opacity: 0;
-  -webkit-transition: all .5s ease;
-  transition: all .5s ease;
+@media only screen and (max-width: 768px) {
+  body div.wrapper {
+    display: block;
+  }
+  body div.wrapper div.wrapper div.left, body div.wrapper div.wrapper div.right {
+    height: 0;
+  }
 }
 /*# sourceMappingURL=main.css.map */
