@@ -29,7 +29,7 @@ body {
                 width: 10em;
                 height: 10em;
                 border-radius: 50%;
-                border: 3px solid white;
+                border: 5px solid white;
                 margin: 0 auto .5em auto;
                 overflow: hidden;
 
@@ -42,7 +42,12 @@ body {
             }
 
             span {
-                display: block;
+                transition: opacity .5s ease;
+                opacity: 0;
+            }
+
+            .fade-in {
+                opacity: 1;
             }
         }
 
@@ -78,6 +83,7 @@ body {
             }
         }
     }
+
 }
 
 @media only screen and (max-width: 768px) {
