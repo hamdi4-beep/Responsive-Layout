@@ -12,6 +12,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Quicksand';
     font-size: 18px;
@@ -22,14 +26,16 @@ body {
 
         .left {
             @include flex-center();
-            background: #2F80ED;
+            background: url(https://www.desktopbackground.org/download/3840x2400/2012/01/31/336601_anime-landscape-sky-wallpapers-hd_4000x2500_h.png);
+            background-size: cover;
+            background-position: center;
             color: white;
 
             .avatar-wrapper {
                 width: 10em;
                 height: 10em;
                 border-radius: 50%;
-                border: 5px solid white;
+                border: 3px solid white;
                 margin: 0 auto .5em auto;
                 overflow: hidden;
 
@@ -49,13 +55,35 @@ body {
             .fade-in {
                 opacity: 1;
             }
+
+            .scroll {
+                margin: 2em auto;
+                text-align: center;
+                display: none;
+
+                &::after {
+                    content: '';
+                    display: inline-block;
+                    padding: 5px;
+                    border-left: 1px solid white;
+                    border-bottom: 1px solid white;
+                    transform: rotate(-45deg);
+                }
+
+                a {
+                    text-decoration: none;
+                    color: white;
+                }
+            }
         }
 
         .right {
+            // background-image: url(https://images.hdqwalls.com/download/anime-scenery-field-4k-9j-2048x2048.jpg);
+            background-size: cover;
+            background-position: center;
             display: grid;
             justify-items: center;
             align-items: center;
-            // background: #eee;
 
             .social-links {
                 @include flex-center();
@@ -64,8 +92,8 @@ body {
 
                 .fab {
                     transition: transform .5s ease;
-                    transform: scale(1, 1);
-                    color: #2F80ED;
+                    transform: scale(1.2, 1.2);
+                    color: #1877F2;
 
                     &:hover {
                         transform: scale(2, 2);
@@ -76,10 +104,24 @@ body {
                 &::before, &::after {
                     content: '';
                     display: block;
-                    border: 1px solid black;
+                    border-bottom: 1px solid black;
                     width: 100%;
                 }
+
+                .fa-github {
+                    color: #24292e;
+                }
+
+                .fa-youtube {
+                    color: red;
+                }
             }
+
+            h1 {
+                text-shadow:
+                0px 1px 4px black;
+            }
+
         }
 
         .left, .right {
@@ -91,17 +133,12 @@ body {
             }
         }
     }
-
 }
 
 @media only screen and (max-width: 768px) {
     
-    body div.wrapper {
+    body div.wrapper, body div.wrapper .left .scroll {
         display: block;
-
-        div.wrapper div.left, div.wrapper div.right {
-            height: 0;
-        }
     }
 
 }
