@@ -22,7 +22,7 @@ body {
 
         .left {
             @include flex-center();
-            background: purple;
+            background: #2F80ED;
             color: white;
 
             .avatar-wrapper {
@@ -50,8 +50,7 @@ body {
             display: grid;
             justify-items: center;
             align-items: center;
-            background: #eee;
-            color: black;
+            // background: #eee;
 
             .social-links {
                 @include flex-center();

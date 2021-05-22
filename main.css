@@ -28,7 +28,7 @@ body .wrapper .left {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: purple;
+  background: #2F80ED;
   color: white;
 }
 
@@ -61,8 +61,6 @@ body .wrapper .right {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #eee;
-  color: black;
 }
 
 body .wrapper .right .social-links {
