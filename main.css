@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
 body {
   font-family: 'Quicksand';
+  font-size: 18px;
   margin: 0;
 }
 
@@ -35,6 +36,11 @@ body .wrapper .left, body .wrapper .right {
       -ms-flex-align: center;
           align-items: center;
   min-height: 100vh;
+}
+
+body .wrapper .left h1:first-letter, body .wrapper .right h1:first-letter {
+  font-size: 1.2em;
+  font-style: bolder;
 }
 
 @media only screen and (max-width: 768px) {
