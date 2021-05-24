@@ -12,12 +12,16 @@ for (const letter of str) {
 
 const spans = document.querySelectorAll('span')
 
-const timer = setInterval(
-    () => {
-        if (char < spans.length) {
-            spans[char == 5 ? char += 1 : char++].classList.add('fade-in')
-        } else {
-            clearInterval(timer)
+const setup = () => {
+    const timer = setInterval(
+        () => {
+            if (char < spans.length) {
+                spans[char == 5 ? char += 1 : char++].classList.add('fade-in')
+            } else {
+                clearInterval(timer)
+            }
         }
-    }
-, 200)
+    , 100)
+}
+
+window.onload = setup

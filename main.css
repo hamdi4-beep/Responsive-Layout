@@ -64,13 +64,17 @@ body .wrapper .left .avatar-wrapper img {
 }
 
 body .wrapper .left span {
-  -webkit-transition: opacity .5s ease;
-  transition: opacity .5s ease;
+  position: relative;
+  top: -.3em;
+  -webkit-transition: all .1s ease-out;
+  transition: all .1s ease-out;
   opacity: 0;
 }
 
 body .wrapper .left .fade-in {
   opacity: 1;
+  position: relative;
+  top: 0;
 }
 
 body .wrapper .left .scroll {
@@ -211,6 +215,7 @@ body .wrapper .left, body .wrapper .right {
 body .wrapper .left .title:first-letter, body .wrapper .right .title:first-letter {
   font-size: 1.2em;
   font-style: bolder;
+  pointer-events: none;
 }
 
 @media only screen and (max-width: 768px) {
