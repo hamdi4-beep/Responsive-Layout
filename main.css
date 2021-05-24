@@ -20,10 +20,11 @@ body .wrapper {
   display: grid;
   -ms-grid-columns: (50%)[2];
       grid-template-columns: repeat(2, 50%);
+  grid-auto-rows: auto;
 }
 
 body .wrapper .left {
-  background: #2F80ED;
+  background: linear-gradient(45deg, #9b52e0, #4b2173);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -77,30 +78,23 @@ body .wrapper .left .scroll {
   display: none;
 }
 
-body .wrapper .left .scroll::after {
-  content: '';
-  display: inline-block;
-  padding: 5px;
-  border-left: 1px solid white;
-  border-bottom: 1px solid white;
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-}
-
-body .wrapper .left .scroll a {
-  text-decoration: underline;
-  color: white;
-}
-
 body .wrapper .left .profile {
   position: relative;
 }
 
 body .wrapper .left .profile .arrow {
+  pointer-events: none;
   position: absolute;
   top: -3em;
   left: 0;
   width: 3em;
+}
+
+body .wrapper .left .profile .verify {
+  position: absolute;
+  bottom: 3.8em;
+  right: 2em;
+  width: 40px;
 }
 
 body .wrapper .right {

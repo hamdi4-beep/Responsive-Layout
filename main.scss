@@ -23,9 +23,10 @@ body {
     .wrapper {
         display: grid;
         grid-template-columns: repeat(2, 50%);
+        grid-auto-rows: auto;
 
         .left {
-            background: #2F80ED;
+            background: linear-gradient(45deg, hsl(271, 70%, 60%), hsl(271, 56%, 29%));
             @include flex-center();
             flex-direction: column;
             color: white;
@@ -61,30 +62,24 @@ body {
                 margin: auto auto 5em auto;
                 text-align: center;
                 display: none;
-
-                &::after {
-                    content: '';
-                    display: inline-block;
-                    padding: 5px;
-                    border-left: 1px solid white;
-                    border-bottom: 1px solid white;
-                    transform: rotate(-45deg);
-                }
-
-                a {
-                    text-decoration: underline;
-                    color: white;
-                }
             }
 
             .profile {
                 position: relative;
 
                 .arrow {
+                    pointer-events: none;
                     position: absolute;
                     top: -3em;
                     left: 0;
                     width: 3em;
+                }
+
+                .verify {
+                    position: absolute;
+                    bottom: 3.8em;
+                    right: 2em;
+                    width: 40px;
                 }
             }
         }
