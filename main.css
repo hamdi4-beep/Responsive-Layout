@@ -23,9 +23,7 @@ body .wrapper {
 }
 
 body .wrapper .left {
-  background: url(https://i.redd.it/z9cggpeubvt01.jpg);
-  background-position: center;
-  background-size: cover;
+  background: #2F80ED;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -40,8 +38,9 @@ body .wrapper .left {
       -ms-flex-direction: column;
           flex-direction: column;
   color: white;
-  -webkit-box-shadow: 0 0 5px black inset;
-          box-shadow: 0 0 5px black inset;
+  -webkit-box-shadow: 0 0 10px black inset;
+          box-shadow: 0 0 10px black inset;
+  text-align: center;
 }
 
 body .wrapper .left .avatar-wrapper {
@@ -91,6 +90,17 @@ body .wrapper .left .scroll::after {
 body .wrapper .left .scroll a {
   text-decoration: underline;
   color: white;
+}
+
+body .wrapper .left .profile {
+  position: relative;
+}
+
+body .wrapper .left .profile .arrow {
+  position: absolute;
+  top: -3em;
+  left: 0;
+  width: 3em;
 }
 
 body .wrapper .right {
@@ -147,16 +157,50 @@ body .wrapper .right .social-links .fa-youtube {
   color: red;
 }
 
-body .wrapper .right h1 {
+body .wrapper .right .title {
   text-shadow: 1px 0px 3px black;
   color: #1F2833;
+}
+
+body .wrapper .right .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 1em 0;
+  text-align: center;
+}
+
+body .wrapper .right .content section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .wrapper .right .content section h1 {
+  margin-top: .5em;
+  border-bottom: 5px solid #6ecf96;
 }
 
 body .wrapper .left, body .wrapper .right {
   min-height: 100vh;
 }
 
-body .wrapper .left h1:first-letter, body .wrapper .right h1:first-letter {
+body .wrapper .left .title:first-letter, body .wrapper .right .title:first-letter {
   font-size: 1.2em;
   font-style: bolder;
 }
