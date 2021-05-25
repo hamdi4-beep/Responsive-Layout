@@ -49,8 +49,9 @@ body {
                     input {
                         display: none;
 
-                        &:checked ~ img {
-                            transform: translateY(27px);
+                        &:checked ~ .fa-moon {
+                            transform: translateY(28px);
+                            color: black;
                         }
                     }
 
@@ -61,12 +62,12 @@ body {
                         border-radius: 100%;
                         height: 100%;
                         cursor: pointer;
+                        text-align: center;
 
-                        img {
-                            position: absolute;
-                            left: 3px;
-                            transition: transform .5s ease;
+                        .fa-moon {
+                            transition: all .5s ease;
                             width: 80%;
+                            color: hsl(271, 56%, 29%);
                         }
                     }
                 }

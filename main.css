@@ -63,9 +63,10 @@ body .wrapper .left .dark-mode-wrapper .container input {
   display: none;
 }
 
-body .wrapper .left .dark-mode-wrapper .container input:checked ~ img {
-  -webkit-transform: translateY(27px);
-          transform: translateY(27px);
+body .wrapper .left .dark-mode-wrapper .container input:checked ~ .fa-moon {
+  -webkit-transform: translateY(28px);
+          transform: translateY(28px);
+  color: black;
 }
 
 body .wrapper .left .dark-mode-wrapper .container label {
@@ -75,16 +76,14 @@ body .wrapper .left .dark-mode-wrapper .container label {
   border-radius: 100%;
   height: 100%;
   cursor: pointer;
+  text-align: center;
 }
 
-body .wrapper .left .dark-mode-wrapper .container label img {
-  position: absolute;
-  left: 3px;
-  -webkit-transition: -webkit-transform .5s ease;
-  transition: -webkit-transform .5s ease;
-  transition: transform .5s ease;
-  transition: transform .5s ease, -webkit-transform .5s ease;
+body .wrapper .left .dark-mode-wrapper .container label .fa-moon {
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
   width: 80%;
+  color: #4b2173;
 }
 
 body .wrapper .left .avatar-wrapper {

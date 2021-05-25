@@ -15,10 +15,8 @@ checkbox.addEventListener('change', e => {
     const elem = e.target // the check box
     if (elem.checked) {
         left.style.background = '#000'
-        left.style.boxShadow = 'none'
     } else {
         left.style.backgroundImage = bg
-        left.style.boxShadow = properties.getPropertyValue('box-shadow')
     }
 })
 
@@ -30,16 +28,12 @@ for (const letter of str) {
 
 const spans = document.querySelectorAll('span')
 
-const setup = () => {
-    const timer = setInterval(
-        () => {
-            if (char < spans.length) {
-                spans[char == 5 ? char += 1 : char++].classList.add('fade-in')
-            } else {
-                clearInterval(timer)
-            }
+const timer = setInterval(
+    () => {
+        if (char < spans.length) {
+            spans[char == 5 ? char += 1 : char++].classList.add('fade-in')
+        } else {
+            clearInterval(timer)
         }
-    , 100)
-}
-
-window.onload = setup
+    }
+, 100)
