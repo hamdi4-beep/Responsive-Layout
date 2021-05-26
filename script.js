@@ -16,7 +16,6 @@ checkbox.addEventListener('change', e => {
         left.style.background = '#000'
     } else {
         left.style.backgroundImage = bg
-        console.log(bg)
     }
 })
 
