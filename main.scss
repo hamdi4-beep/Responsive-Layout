@@ -36,11 +36,12 @@ body {
             box-shadow: 0 0 10px black inset;
             text-align: center;
             font-weight: lighter;
+            padding: 1em;
 
             .dark-mode-wrapper {
                 position: absolute;
-                top: 1em;
-                right: 1em;
+                top: 1rem;
+                right: 1rem;
                 
                 .container {
                     background: white;
@@ -50,6 +51,7 @@ body {
 
                     input {
                         display: none;
+                        outline: none;
 
                         &:checked ~ .fa-moon {
                             transform: translateY(28px);
@@ -60,7 +62,7 @@ body {
                     label {
                         position: relative;
                         display: block;
-                        padding-top: .3em;
+                        padding-top: .3rem;
                         border-radius: 100%;
                         height: 100%;
                         cursor: pointer;
@@ -75,25 +77,9 @@ body {
                 }
             }
 
-            .avatar-wrapper {
-                width: 10em;
-                height: 10em;
-                border-radius: 50%;
-                border: 3px solid white;
-                margin: 0 auto .5em auto;
-                overflow: hidden;
-
-                img {
-                    object-fit: cover;
-                    object-position: center;
-                    width: 100%;
-                    height: 100%;
-                }
-            }
-
             span {
                 position: relative;
-                top: -.3em;
+                top: -.3rem;
                 transition: all .1s ease-out;
                 opacity: 0;
             }
@@ -111,26 +97,79 @@ body {
             }
 
             .profile {
-                position: relative;
+                margin-bottom: 1rem;
+                text-align: center;
 
-                .arrow {
-                    pointer-events: none;
-                    position: absolute;
-                    top: -3em;
-                    left: 0;
-                    width: 3em;
+                .avatar-wrapper {
+                    position: relative;
+                    width: 10rem;
+                    height: 10rem;
+                    border-radius: 50%;
+                    border: 3px solid white;
+                    margin: 0 auto .5em auto;
+    
+                    img {
+                        object-fit: cover;
+                        object-position: center;
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 50%;
+                    }
+
+                    .verify {
+                        position: absolute;
+                        bottom: 0;
+                        right: 4px;
+                        width: 50px;
+                        height: 50px;
+                    }
+
+                    .arrow {
+                        pointer-events: none;
+                        position: absolute;
+                        top: -4rem;
+                        left: -3rem;
+                        width: 80px;
+                        height: 80px;
+                    }
+                }
+            }
+
+            section {
+                position: relative;
+                margin: auto 0 1.5em 0;
+                padding: 1.2rem;
+
+                .header {
+                    font-weight: 300;
+                    font-size: 1.5rem;
+                    margin-bottom: 2rem;
                 }
 
-                .verify {
+                &::before, &::after {
                     position: absolute;
-                    bottom: 3.8em;
-                    right: 2em;
-                    width: 40px;
+                    content: '';
+                    display: inline;
+                    border-top: 1px solid white;
+                    border-left: 1px solid white;
+                    padding: 1em;
+                }
+
+                &::before {
+                    top: 20px;
+                    left: 10px;
+                }
+
+                &::after {
+                    transform: rotate(180deg);
+                    bottom: -20px;
+                    right: 10px;
                 }
             }
         }
 
         .right {
+            position: relative;
             display: grid;
             justify-items: center;
             align-items: center;
@@ -140,12 +179,12 @@ body {
                 position: absolute;
                 z-index: 1;
                 top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                display: inline-block;
-                border-top: 35px solid transparent;
-                border-right: 50px solid white;
-                border-bottom: 35px solid transparent;
+                left: -30px;
+                margin-top: -18px;
+                display: inline;
+                border-top: 25px solid transparent;
+                border-right: 40px solid white;
+                border-bottom: 25px solid transparent;
             }
 
             .social-links {
@@ -231,6 +270,15 @@ body {
     }
 
     body div.wrapper .right::after {
+        top: -20px;
+        left: 50%;
+        margin-left: -18px;
+        transform: rotate(90deg);
+        border-top-color: white;
+        border-bottom-color: white;
+    }
+
+    body div.wrapper .left .arrow {
         display: none;
     }
 
