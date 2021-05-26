@@ -2,9 +2,8 @@ const title = document.querySelector('.title') // the username element
 const left = document.querySelector('.left')
 const right = document.querySelector('.right')
 const checkbox = document.querySelector('input') // the checkbox element
-const properties = getComputedStyle(left)
-const bg = properties.getPropertyValue('background-image')
-const container = title.parentElement // the left container
+const bg = left.style.backgroundImage
+const container = title.parentElement // the profile container
 const str = title.textContent // the username's string
 let char = 0
 title.textContent = ''
@@ -17,6 +16,7 @@ checkbox.addEventListener('change', e => {
         left.style.background = '#000'
     } else {
         left.style.backgroundImage = bg
+        console.log(bg)
     }
 })
 

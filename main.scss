@@ -19,6 +19,7 @@ html {
 body {
     font-family: 'Quicksand';
     font-size: 18px;
+    overflow-x: hidden;
 
     .wrapper {
         display: grid;
@@ -27,6 +28,7 @@ body {
 
         .left {
             position: relative;
+            z-index: 1;
             background: linear-gradient(45deg, hsl(271, 70%, 60%), hsl(271, 56%, 29%));
             @include flex-center();
             flex-direction: column;
@@ -136,6 +138,7 @@ body {
             &::after {
                 content: '';
                 position: absolute;
+                z-index: 1;
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
