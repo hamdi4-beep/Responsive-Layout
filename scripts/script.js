@@ -13,7 +13,7 @@ title.textContent = ''
 checkbox.addEventListener('change', e => {
     const elem = e.target // the check box
     if (elem.checked) {
-        left.style.background = '#000'
+        left.style.background ='#000'
     } else {
         left.style.backgroundImage = bg
     }

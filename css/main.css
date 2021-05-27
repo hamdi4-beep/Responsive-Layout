@@ -137,9 +137,10 @@ body .wrapper .left .profile .avatar-wrapper img {
 body .wrapper .left .profile .avatar-wrapper .verify {
   position: absolute;
   bottom: 0;
-  right: -5px;
-  width: 50px;
-  height: 50px;
+  right: 15px;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
 }
 
 body .wrapper .left .profile .avatar-wrapper .arrow {
@@ -163,7 +164,11 @@ body .wrapper .left section .header {
   margin-bottom: 2rem;
 }
 
-body .wrapper .left section::before, body .wrapper .left section::after {
+body .wrapper .left section article {
+  position: relative;
+}
+
+body .wrapper .left section article::before, body .wrapper .left section article::after {
   position: absolute;
   content: '';
   display: inline;
@@ -172,16 +177,16 @@ body .wrapper .left section::before, body .wrapper .left section::after {
   padding: 1em;
 }
 
-body .wrapper .left section::before {
-  top: 20px;
-  left: 10px;
+body .wrapper .left section article::before {
+  top: -10px;
+  left: -10px;
 }
 
-body .wrapper .left section::after {
+body .wrapper .left section article::after {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
-  bottom: -20px;
-  right: 10px;
+  bottom: -10px;
+  right: -10px;
 }
 
 body .wrapper .left h1 {
@@ -205,7 +210,7 @@ body .wrapper .right::after {
   top: 50%;
   left: -30px;
   margin-top: -18px;
-  display: inline;
+  display: inline-block;
   border-top: 25px solid transparent;
   border-right: 40px solid white;
   border-bottom: 25px solid transparent;
@@ -313,13 +318,16 @@ body .wrapper .left .title:first-letter, body .wrapper .right .title:first-lette
     margin-top: auto;
   }
   body div.wrapper .right::after {
-    top: -20px;
+    top: -.4em;
     left: 50%;
-    margin-left: -18px;
+    margin-left: -1.5em;
     -webkit-transform: rotate(90deg);
             transform: rotate(90deg);
-    border-top-color: white;
-    border-bottom-color: white;
+    border: none;
+    background: white;
+    width: 2.5em;
+    height: 2.5em;
+    border-radius: 38px;
   }
   body div.wrapper .left .arrow {
     display: none;

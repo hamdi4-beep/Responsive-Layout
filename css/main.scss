@@ -119,9 +119,10 @@ body {
                     .verify {
                         position: absolute;
                         bottom: 0;
-                        right: -5px;
-                        width: 50px;
-                        height: 50px;
+                        right: 15px;
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 100%;
                     }
 
                     .arrow {
@@ -136,6 +137,7 @@ body {
             }
 
             section {
+                // background: orange;
                 position: relative;
                 margin: auto 0 1.5em 0;
                 padding: 1.2rem;
@@ -146,24 +148,28 @@ body {
                     margin-bottom: 2rem;
                 }
 
-                &::before, &::after {
-                    position: absolute;
-                    content: '';
-                    display: inline;
-                    border-top: 2px solid white;
-                    border-left: 2px solid white;
-                    padding: 1em;
-                }
+                article {
+                    position: relative;
 
-                &::before {
-                    top: 20px;
-                    left: 10px;
-                }
-
-                &::after {
-                    transform: rotate(180deg);
-                    bottom: -20px;
-                    right: 10px;
+                    &::before, &::after {
+                        position: absolute;
+                        content: '';
+                        display: inline;
+                        border-top: 2px solid white;
+                        border-left: 2px solid white;
+                        padding: 1em;
+                    }
+    
+                    &::before {
+                        top: -10px;
+                        left: -10px;
+                    }
+    
+                    &::after {
+                        transform: rotate(180deg);
+                        bottom: -10px;
+                        right: -10px;
+                    }
                 }
             }
 
@@ -185,7 +191,7 @@ body {
                 top: 50%;
                 left: -30px;
                 margin-top: -18px;
-                display: inline;
+                display: inline-block;
                 border-top: 25px solid transparent;
                 border-right: 40px solid white;
                 border-bottom: 25px solid transparent;
@@ -274,12 +280,15 @@ body {
     }
 
     body div.wrapper .right::after {
-        top: -20px;
+        top: -.4em;
         left: 50%;
-        margin-left: -18px;
+        margin-left: -1.5em;
         transform: rotate(90deg);
-        border-top-color: white;
-        border-bottom-color: white;
+        border: none;
+        background: white;
+        width: 2.5em;
+        height: 2.5em;
+        border-radius: 38px;
     }
 
     body div.wrapper .left .arrow {
