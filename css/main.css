@@ -296,7 +296,7 @@ body .wrapper .right .content {
 }
 
 body .wrapper .right .content section {
-  padding: 1em;
+  padding: .5em;
 }
 
 body .wrapper .right .content section .projects-wrapper {
@@ -327,8 +327,8 @@ body .wrapper .right .content section .projects-wrapper .project {
           align-items: center;
   position: relative;
   z-index: 999;
-  width: 10em;
-  height: 10em;
+  width: 9em;
+  height: 9em;
 }
 
 body .wrapper .right .content section .projects-wrapper .project::after {

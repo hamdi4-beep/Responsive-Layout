@@ -257,7 +257,7 @@ body {
                 text-align: center;
 
                 section {
-                    padding: 1em;
+                    padding: .5em;
                     
                     .projects-wrapper {
                         @include flex-center();
@@ -269,8 +269,8 @@ body {
                             @include flex-center();
                             position: relative;
                             z-index: 999;
-                            width: 10em;
-                            height: 10em;
+                            width: 9em;
+                            height: 9em;
 
                             &::after {
                                 pointer-events: none;
