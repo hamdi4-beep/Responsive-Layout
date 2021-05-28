@@ -45,7 +45,7 @@ body {
             text-align: center;
             font-weight: lighter;
             padding: 1em;
-
+        
             .dark-mode-wrapper {
                 position: absolute;
                 top: 1rem;
@@ -63,7 +63,7 @@ body {
 
                         &:checked ~ .fa-moon {
                             transform: translateY(28px);
-                            color: black;
+                            color: #18191c;
                         }
                     }
 
@@ -186,6 +186,11 @@ body {
             }
         }
 
+        .dark-mode {
+            background: none;
+            background: #18191c;
+        }
+
         .right {
             position: relative;
             display: grid;
@@ -252,6 +257,7 @@ body {
                 text-align: center;
 
                 section {
+                    padding: 1em;
                     
                     .projects-wrapper {
                         @include flex-center();

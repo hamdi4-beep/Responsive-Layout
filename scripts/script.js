@@ -2,8 +2,6 @@ const title = document.querySelector('.title') // the username element
 const left = document.querySelector('.left')
 const right = document.querySelector('.right')
 const checkbox = document.querySelector('input') // the checkbox element
-const bg = left.style.backgroundImage
-const container = title.parentElement // the profile container
 const str = title.textContent // the username's string
 let char = 0
 title.textContent = ''
@@ -13,9 +11,9 @@ title.textContent = ''
 checkbox.addEventListener('change', e => {
     const elem = e.target // the check box
     if (elem.checked) {
-        left.style.background ='#000'
+        left.classList.add('dark-mode')
     } else {
-        left.style.backgroundImage = bg
+        left.classList.remove('dark-mode')
     }
 })
 

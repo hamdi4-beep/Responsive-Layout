@@ -76,7 +76,7 @@ body .wrapper .left .dark-mode-wrapper .container input {
 body .wrapper .left .dark-mode-wrapper .container input:checked ~ .fa-moon {
   -webkit-transform: translateY(28px);
           transform: translateY(28px);
-  color: black;
+  color: #18191c;
 }
 
 body .wrapper .left .dark-mode-wrapper .container label {
@@ -201,6 +201,11 @@ body .wrapper .left h1 {
   font-weight: 300;
 }
 
+body .wrapper .dark-mode {
+  background: none;
+  background: #18191c;
+}
+
 body .wrapper .right {
   position: relative;
   display: -ms-grid;
@@ -288,6 +293,10 @@ body .wrapper .right .content {
           flex-direction: column;
   padding: 1em 0;
   text-align: center;
+}
+
+body .wrapper .right .content section {
+  padding: 1em;
 }
 
 body .wrapper .right .content section .projects-wrapper {
