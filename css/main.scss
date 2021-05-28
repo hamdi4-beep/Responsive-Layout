@@ -6,10 +6,17 @@
     align-items: center;
 }
 
+// resets
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: none;
 }
 
 html {
@@ -20,6 +27,7 @@ body {
     font-family: 'Quicksand';
     font-size: 18px;
     overflow-x: hidden;
+    color: white !important;
 
     .wrapper {
         display: grid;
@@ -137,7 +145,6 @@ body {
             }
 
             section {
-                // background: orange;
                 position: relative;
                 margin: auto 0 1.5em 0;
                 padding: 1.2rem;
@@ -163,12 +170,13 @@ body {
                     &::before {
                         top: -10px;
                         left: -10px;
+                        transform: rotate(0deg);
                     }
     
                     &::after {
                         transform: rotate(180deg);
-                        bottom: -10px;
-                        right: -10px;
+                        bottom: -3px;
+                        right: -3px;
                     }
                 }
             }
@@ -244,13 +252,64 @@ body {
                 text-align: center;
 
                 section {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
+                    
+                    .projects-wrapper {
+                        @include flex-center();
+                        flex-wrap: wrap;
+                        gap: 1em;
+                        color: white;
 
-                    h1 {
-                        margin-top: .5em;
-                        border-bottom: 5px solid hsl(122, 66, 64);
+                        .project {
+                            @include flex-center();
+                            position: relative;
+                            z-index: 999;
+                            width: 10em;
+                            height: 10em;
+
+                            &::after {
+                                pointer-events: none;
+                                position: absolute;
+                                z-index: -1;
+                                top: 0;
+                                left: 0;
+                                opacity: 0;
+                                transition: opacity .5s ease;
+                                content: '';
+                                display: block;
+                                background: black;
+                                width: 100%;
+                                height: 100%;
+                            }
+
+                            &:hover::after {
+                                opacity: .5;
+                                cursor: pointer;
+                            }
+
+                            &:hover p {
+                                display: block;
+                            }
+
+                            p {
+                                pointer-events: none;
+                                display: none;
+                            }
+
+                            a, a:visited {
+                                color: white;
+                            }
+                        }
+
+                        img {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            z-index: -1;
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            object-position: center;
+                        }
                     }
                 }
             }
@@ -271,7 +330,7 @@ body {
 
 @media only screen and (max-width: 768px) {
     
-    body div.wrapper, body div.wrapper .left .scroll {
+    body div.wrapper, body div.wrapper .left .scroll, body .wrapper .right .content section .projects-wrapper .project p {
         display: block;
     }
 
@@ -282,7 +341,7 @@ body {
     body div.wrapper .right::after {
         top: -.4em;
         left: 50%;
-        margin-left: -1.5em;
+        margin-left: -1.9em;
         transform: rotate(90deg);
         border: none;
         background: white;
@@ -293,6 +352,10 @@ body {
 
     body div.wrapper .left .arrow {
         display: none;
+    }
+
+    body .wrapper .right .content section .projects-wrapper .project::after {
+        opacity: .5;
     }
 
 }
