@@ -193,8 +193,8 @@ body .wrapper .left section article::before {
 body .wrapper .left section article::after {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
-  bottom: -3px;
-  right: -3px;
+  bottom: -8px;
+  right: -10px;
 }
 
 body .wrapper .left h1 {
