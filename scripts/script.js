@@ -11,12 +11,14 @@ function init() {
 
     // a toggle switch functionality for the checkbox
 
+    localStorage.setItem('enabled', 'dark-mode')
+
     checkbox.addEventListener('change', e => {
         const elem = e.target // the check box
         if (elem.checked) {
-            left.classList.add('dark-mode')
+            left.classList.add(localStorage.getItem('enabled'))
         } else {
-            left.classList.remove('dark-mode')
+            left.classList.remove(localStorage.getItem('enabled'))
         }
     })
 

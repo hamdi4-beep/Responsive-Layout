@@ -37,7 +37,7 @@ body {
         .left {
             position: relative;
             z-index: 1;
-            background: linear-gradient(45deg, hsl(271, 70%, 60%), hsl(271, 56%, 29%));
+            background: radial-gradient(circle, rgb(155, 82, 224), rgb(75, 33, 115));
             @include flex-center();
             flex-direction: column;
             color: white;
@@ -60,6 +60,7 @@ body {
                     input {
                         display: none;
                         outline: none;
+                        border: none;
 
                         &:checked ~ .fa-moon {
                             transform: translateY(28px);
@@ -188,7 +189,7 @@ body {
 
         .dark-mode {
             background: none;
-            background: #18191c;
+            background: radial-gradient(circle, #222, #000);
         }
 
         .right {
