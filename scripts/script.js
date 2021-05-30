@@ -3,7 +3,7 @@ window.onload = init
 function init() {
     const title = document.querySelector('.title') // the username element
     const left = document.querySelector('.left')
-    const right = document.querySelector('.right')
+    const bg = document.querySelector('.bg')
     const checkbox = document.querySelector('input') // the checkbox element
     const str = title.textContent // the username's string
     let char = 0
@@ -39,4 +39,7 @@ function init() {
             }
         }
     , 100)
+
+    bg.style.display = 'none'
+
 }

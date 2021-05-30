@@ -27,6 +27,7 @@ html {
 }
 
 body {
+    @include flex-center();
     font-family: 'Quicksand';
     font-size: 18px;
     overflow-x: hidden;
@@ -197,9 +198,6 @@ body {
         }
 
         .right {
-            background-image: url(https://images.unsplash.com/photo-1610570309622-5ef5ad003a95?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8d2hpdGUlMjBhZXN0aGV0aWN8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80);
-            background-size: cover;
-            // background-position: bottom;
             position: relative;
             padding: 0 1rem 0 1rem;
             @include flex-center();
@@ -327,6 +325,34 @@ body {
                 }
             }
 
+        }
+    }
+
+    .bg {
+        @include flex-center();
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 9999;
+
+        &::after {
+            content: '';
+            display: block;
+            @include flex-center();
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: black;
+            opacity: .5;
+        }
+
+        .block {
+            position: relative;
+            z-index: 1;
+            background: white;
+            width: 20rem;
+            color: black;
+            padding: 1rem;
         }
     }
 }
