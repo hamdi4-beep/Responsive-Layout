@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 
+$bg-dark: hsl(249, 70%, 22%);
+$bg-light: hsl(300, 100%, 50%);
+
 @mixin flex-center {
     display: flex;
     justify-content: center;
@@ -38,7 +41,7 @@ body {
         .left {
             position: relative;
             z-index: 1;
-            background: radial-gradient(circle, rgb(155, 82, 224), rgb(75, 33, 115));
+            background: radial-gradient(circle, $bg-light, $bg-dark);
             @include flex-center();
             flex-direction: column;
             color: white;
@@ -81,7 +84,7 @@ body {
                         .fa-moon {
                             transition: all .5s ease;
                             width: 80%;
-                            color: hsl(271, 56%, 29%);
+                            color: hsl(249, 70%, 22%);
                         }
                     }
                 }
@@ -194,6 +197,9 @@ body {
         }
 
         .right {
+            background-image: url(https://images.unsplash.com/photo-1610570309622-5ef5ad003a95?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8d2hpdGUlMjBhZXN0aGV0aWN8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80);
+            background-size: cover;
+            // background-position: bottom;
             position: relative;
             padding: 0 1rem 0 1rem;
             @include flex-center();
@@ -331,9 +337,9 @@ body {
         display: block;
     }
 
-    /* body div.wrapper .left .content {
-        margin-top: auto;
-    } */
+    body div.wrapper .left .content {
+        margin: auto;
+    }
 
     body div.wrapper .right::after {
         top: -.4em;

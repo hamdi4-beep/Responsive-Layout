@@ -35,7 +35,7 @@ body .wrapper {
 body .wrapper .left {
   position: relative;
   z-index: 1;
-  background: radial-gradient(circle, #9b52e0, #4b2173);
+  background: radial-gradient(circle, magenta, #1d115f);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -96,7 +96,7 @@ body .wrapper .left .dark-mode-wrapper .container label .fa-moon {
   -webkit-transition: all .5s ease;
   transition: all .5s ease;
   width: 80%;
-  color: #4b2173;
+  color: #1d115f;
 }
 
 body .wrapper .left span {
@@ -210,6 +210,8 @@ body .wrapper .dark-mode {
 }
 
 body .wrapper .right {
+  background-image: url(https://images.unsplash.com/photo-1610570309622-5ef5ad003a95?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8d2hpdGUlMjBhZXN0aGV0aWN8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80);
+  background-size: cover;
   position: relative;
   padding: 0 1rem 0 1rem;
   display: -webkit-box;
@@ -380,9 +382,9 @@ body .wrapper .right .content section .projects-wrapper img {
   body div.wrapper, body div.wrapper .left .scroll, body .wrapper .right .content section .projects-wrapper .project p {
     display: block;
   }
-  /* body div.wrapper .left .content {
-        margin-top: auto;
-    } */
+  body div.wrapper .left .content {
+    margin: auto;
+  }
   body div.wrapper .right::after {
     top: -.4em;
     left: 50%;
