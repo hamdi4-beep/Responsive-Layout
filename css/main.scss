@@ -30,9 +30,10 @@ body {
     color: white !important;
 
     .wrapper {
+        height: 100vh;
         display: grid;
         grid-template-columns: repeat(2, 50%);
-        grid-auto-rows: auto;
+        grid-template-rows: 100vmin;
 
         .left {
             position: relative;
@@ -106,7 +107,7 @@ body {
             }
 
             .profile {
-                margin-bottom: 1rem;
+                margin: auto 0 auto 0;
                 text-align: center;
 
                 .avatar-wrapper {
@@ -137,10 +138,10 @@ body {
                     .arrow {
                         pointer-events: none;
                         position: absolute;
-                        top: -4rem;
+                        top: -2rem;
                         left: -3rem;
-                        width: 80px;
-                        height: 80px;
+                        width: 60px;
+                        height: 60px;
                     }
                 }
             }
@@ -194,9 +195,8 @@ body {
 
         .right {
             position: relative;
-            display: grid;
-            justify-items: center;
-            align-items: center;
+            padding: 0 1rem 0 1rem;
+            @include flex-center();
 
             &::after {
                 content: '';
@@ -251,20 +251,20 @@ body {
 
             .content {
                 display: flex;
-                justify-content: space-between;
-                height: 100%;
                 flex-direction: column;
+                height: 100%;
                 padding: 1em 0;
                 text-align: center;
 
                 section {
-                    padding: .5em;
+                    margin: auto;
                     
                     .projects-wrapper {
-                        @include flex-center();
-                        flex-wrap: wrap;
+                        display: grid;
+                        grid-template-columns: repeat(2, 1fr);
                         gap: 1em;
                         color: white;
+                        margin-bottom: auto;
 
                         .project {
                             @include flex-center();
@@ -322,16 +322,6 @@ body {
             }
 
         }
-
-        .left, .right {
-            min-height: 100vh;
-
-            .title:first-letter {
-                font-size: 1.2em;
-                font-style: bolder;
-                pointer-events: none;
-            }
-        }
     }
 }
 
@@ -341,9 +331,9 @@ body {
         display: block;
     }
 
-    body div.wrapper .left .content {
+    /* body div.wrapper .left .content {
         margin-top: auto;
-    }
+    } */
 
     body div.wrapper .right::after {
         top: -.4em;
@@ -364,5 +354,9 @@ body {
     body .wrapper .right .content section .projects-wrapper .project::after {
         opacity: .5;
     }
+
+    body .wrapper .left, body .wrapper .right {
+        height: 100%;
+    } 
 
 }
